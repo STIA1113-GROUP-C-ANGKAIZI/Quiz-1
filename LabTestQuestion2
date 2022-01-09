@@ -1,0 +1,46 @@
+package selfProgramming2;
+import java.util.Scanner;
+public class LabTest2 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		int a, b;
+		Scanner scan = new Scanner (System.in);
+		System.out.print("Enter sales         : RM");
+		a = scan.nextInt();
+		System.out.print("Enter hours worked  : RM");
+		b = scan.nextInt();
+		
+		if ((a >= 150) && (a <= 300)){
+			double com = a * 5 / 100;
+			System.out.printf("%-10s%3.2f", "\nCommission  :  RM" , com);
+			double hour = b * 5;
+			double dailywages = hour + com;
+			System.out.printf("%-10s%3.2f", "\nCommission  :  RM" , dailywages);
+		}
+		
+		else if ((a >= 301) && (a <= 500)){
+			double com = a * 10 / 100;
+			System.out.printf("%-10s%3.2f", "\nCommission  :  RM" , com);
+			double hour = b * 5;
+			double dailywages = hour + com;
+			System.out.printf("%-10s%3.2f", "\nCommission  :  RM" , dailywages);
+		}
+		else if (a > 500){
+			double com = a * 15 / 100;
+			System.out.printf("%-10s%3.2f", "\nCommission  :  RM" , com);
+			double hour = b * 5;
+			double dailywages = hour + com;
+			System.out.printf("%-10s%3.2f", "\nCommission  :  RM" , dailywages);
+		}
+	}
+
+}
+
+Output:
+Enter sales         : RM500
+Enter hours worked  : RM5
+
+Commission  :  RM50.00
+Commission  :  RM75.00
