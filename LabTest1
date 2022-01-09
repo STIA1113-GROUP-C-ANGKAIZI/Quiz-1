@@ -1,0 +1,72 @@
+package selfProgramming2;
+import java.util.Scanner;
+public class LabTest1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		int j, a, b, c, e, f, g;
+		
+		Scanner scan = new Scanner(System.in);
+		
+	System.out.print("Enter the number of items: ");
+	j = scan.nextInt();
+	if (j <= 3) {
+		System.out.print("Enter price of first item: RM");
+		a = scan.nextInt();
+		System.out.print("Enter quantity of first item: ");
+		e = scan.nextInt();
+		
+		System.out.print("\nEnter price of second item: RM");
+		b = scan.nextInt();
+		System.out.print("Enter quantity of second item: ");
+		f = scan.nextInt();
+		
+		System.out.print("\nEnter price of third item: RM");
+		c = scan.nextInt();
+		System.out.print("Enter quantity of third item: ");
+		g = scan.nextInt();
+		
+		System.out.println();
+		
+		double total = (a*e) + (b*f) + (c*g);
+		System.out.printf("%-10s%3.2f", "Total price        :  RM" , total);
+		
+		if (total > 100) {
+			double d1 = total * 20 / 100;
+			System.out.printf("%-10s%3.2f", "\nDiscount received  :  RM" , d1);
+			double p1 = total - d1;
+			System.out.printf("%-10s%3.2f", "\nPrice to be paid   :  RM" , p1);
+		}
+		
+		else {
+			double d1 = total * 10 / 100;
+			System.out.printf("%-10s%3.2f", "\nDiscount received  :  RM" , d1);
+			double p1 = total - d1;
+			System.out.printf("%-10s%3.2f", "\nPrice to be paid   :  RM" , p1);
+		}
+		}
+	else {
+		System.out.println("Please try again");
+		System.out.println("(maximum number of items is 3)");
+	}
+		
+	}
+
+}
+
+Output:
+
+Enter the number of items: 3
+Enter price of first item: RM150
+Enter quantity of first item: 2
+
+Enter price of second item: RM50
+Enter quantity of second item: 3
+
+Enter price of third item: RM30
+Enter quantity of third item: 1
+
+Total price        :  RM480.00
+Discount received  :  RM96.00
+Price to be paid   :  RM384.00
